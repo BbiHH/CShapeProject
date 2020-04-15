@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DistricvtQuery.Domain.Province">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAEAAgAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Province.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DistricvtQuery.Domain.City">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>City.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Province" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DistricvtQuery.Domain.District">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAABAAAgA=</HashCode>
+      <FileName>District.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="City" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
