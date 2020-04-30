@@ -32,7 +32,7 @@ namespace BookManage.SimpleDBRepository
 
         public IList<Book> FindAll()
         {
-            IList<Book> bookList = Db.Books.All();
+            IList<Book> bookList = Db.Books.All().ToArray<Book>();
             return bookList;
         }
 

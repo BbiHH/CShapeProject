@@ -165,6 +165,7 @@
             // 
             this.txtbh.Location = new System.Drawing.Point(106, 37);
             this.txtbh.Name = "txtbh";
+            this.txtbh.ReadOnly = true;
             this.txtbh.Size = new System.Drawing.Size(134, 25);
             this.txtbh.TabIndex = 10;
             this.txtbh.Text = "0";
@@ -261,6 +262,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "取消";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // BookManageForm
             // 

@@ -36,7 +36,7 @@ namespace BookManage.UI
         /// </summary>
         private void LoadBooks()
         {
-            var data = bookRepository.FindAll();
+            IList<Book> data = bookRepository.FindAll();
             dataGridView1.DataSource = data;
         }
 
@@ -69,21 +69,23 @@ namespace BookManage.UI
         private void ShowBook(Book book)
         {
             txtbh.Text = book.Id.ToString();
-            txtTitle.Text = book.Title.ToString();
-            txtcbs.Text = book.Press.ToString();
-            txtISBN.Text = book.Isbn.ToString();
-            txtAu.Text = book.Author.ToString();
+            txtTitle.Text = book.Title;
+            txtcbs.Text = book.Press;
+            txtISBN.Text = book.Isbn;
+            txtAu.Text = book.Author;
             txtPrice.Text = book.Price.ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var book = (Book)dataGridView1.CurrentRow.DataBoundItem;
+            ShowBook(book);
         }
 
         private void ClearBookDetails()
         {
             ShowBook(new Book());
+            txtPrice.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -126,10 +128,16 @@ namespace BookManage.UI
             }
             else
             {
+                book.Id = new Random().Next(1, 200);
                 bookRepository.Add(book);
             }
             LoadBooks();
             ClearBookDetails();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

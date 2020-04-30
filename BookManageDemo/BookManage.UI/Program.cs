@@ -30,7 +30,7 @@ namespace BookManage.UI
             BookManageForm form = new BookManageForm();
             form.bookRepository = repository;
 
-            Application.Run(new BookManageForm());
+            Application.Run(form);
         }
     }
 }
